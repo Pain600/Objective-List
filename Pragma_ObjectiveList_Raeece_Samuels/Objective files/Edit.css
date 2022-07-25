@@ -1,0 +1,181 @@
+/*
+Name: Raeece Samuels
+Task: To-do-List
+Date: 23/07/2022
+*/
+
+/*
+Padding and border in an elements width and height
+*/
+
+* {
+    box-sizing: border-box;
+}
+
+/*
+adding a background to the webpage
+*/
+body {
+    font-family: "Times New Roman";
+    background-size: cover;
+    background-image: url("Background-Image.jpeg")
+}
+
+
+/*
+Remove margins from list
+*/
+
+ul {
+
+    margin: 0;
+    padding: 0;
+}
+
+/*
+Styling the items on the list
+*/
+
+ul li{
+    cursor: pointer;
+    position: relative;
+    padding: 12px 8px 12px 40px;
+    background: burlywood;
+    font-size: 18px;
+    font-family: "Times New Roman";
+    transition: 0.2s;
+
+/*
+Unselecting the selected item
+*/
+
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/*
+Darker colour on hover
+*/
+
+ul li:hover{
+    background: #ddd;
+}
+
+/*
+when clicked on the background colour will change
+*/
+
+ul li.checked{
+    background: #888;
+    color: black;
+    text-decoration: line-through;
+    text-decoration-thickness: 30%;
+    text-decoration-color: midnightblue;
+}
+
+/*
+Adding a mark when clicked on
+*/
+
+ul li.checked::before{
+    content: '';
+    position: absolute;
+    border-color: #fff;
+    border-style: solid;
+    border-width: 0 2px 2px 0;
+    top: 10px;
+    left: 16px;
+    transform: rotate(180deg);
+    height: 15px;
+    width: 7px;
+}
+
+/*
+Style of close button
+*/
+
+.close{
+    transition: opacity 500ms;
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 12px 16px 12px 16px;
+    -webkit-transition-property:ul li ;
+    transition-duration: 2s;
+}
+.close.fadeOut{
+    opacity: 0;
+}
+
+.close:hover {
+    background-color: red;
+    color: coral;
+}
+
+
+
+/*
+Header styling
+*/
+
+.header {
+    background-color: royalblue;
+    padding: 30px 40px;
+    color: white;
+    font-family: "Times New Roman";
+    text-align: center;
+    text-decoration: underline;
+    text-decoration-color: mintcream;
+}
+
+/*
+Clearing the floats after the header
+*/
+
+.header:after{
+
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/*
+Styling the input
+*/
+
+input{
+    font-family: "Times New Roman";
+    margin: 0;
+    border: none;
+    border-radius: 0;
+    width: 75%;
+    padding: 10px;
+    float: left;
+    font-size: 16px;
+}
+
+/*
+Styling the Add button
+*/
+
+.addBtn {
+    transition: ease-out;
+    padding: 10px;
+    width: 25%;
+    background: #d9d9d9;
+    color: #555;
+    float: left;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: 0.4s;
+    border-radius: 0;
+}
+
+.addBtn:hover{
+    color: #bbb;
+}
+
